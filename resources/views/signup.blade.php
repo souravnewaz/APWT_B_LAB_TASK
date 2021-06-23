@@ -21,6 +21,7 @@
         <input type="password" name="password_confirmation" placeholder="Confirm Password"><br><br>
         <input type="submit" name="submit" placeholder="Signup">
     </form>
+    <a href="/login">Login</a>
     @if (count($errors) > 0)
     <div>
        <ul>

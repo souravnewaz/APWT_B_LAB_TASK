@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LogoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
 
 Route::get('/login', [LoginController::class, 'index'] );
@@ -27,3 +28,6 @@ Route::get('/signup', [SignupController::class, 'index'] );
 Route::post('/signup', [SignupController::class, 'signup'] );
 
 Route::get('/home', [HomeController::class, 'index']);
+
+Route::get('/logout', [LogoutController::class, 'logout']);
+

@@ -8,5 +8,9 @@
 </head>
 <body>
     <h1>Home Page</h1>
+    <a href="/logout">Logout</a>
+    @if(session()->has('user_name'))
+        <p> {{session()->get('user_name')}} </p>
+    @endif    
 </body>
 </html>
