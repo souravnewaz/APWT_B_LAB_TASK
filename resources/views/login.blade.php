@@ -12,8 +12,9 @@
         @csrf
         <input type="text" name="email" placeholder="Email"> <br><br>
         <input type="password" name="password" placeholder="Password"><br><br>
-        <input type="submit" name="submit" placeholder="Login">
+        <input type="submit" name="submit" value="Login">
     </form>
+    <a href="/signup">Signup</a>
     @if (count($errors) > 0)
     <div>
        <ul>

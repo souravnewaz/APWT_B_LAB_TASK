@@ -22,8 +22,8 @@ class LoginController extends Controller
         $password = $validated['password'];
 
         if(DB::table('users')->where('email', '=', $email)->where('password', '=', $password)->exists()){
-            $users = DB::table('users')->where('email', '=', $email)->where('password', '=', $password)->get();
-           dd($users->all());
+            $users = DB::table('users')->where('email', '=', $email)->where('password', '=', $password)->first();
+           
             session([
                 'user_name' => $users->email,
                 'user_type' => $users->user_type
